@@ -12,6 +12,9 @@ out/
 *.tar.gz
 *.rar
 
+# Ignoring nix related files
+result*
+
 # Ignoring VSCode related files
 .vscode/
 
