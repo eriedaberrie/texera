@@ -11,7 +11,7 @@ const gitInfo = gitDescribeSync({
 gitInfo.version = version;
 
 if (!existsSync(__dirname + "/src/environments")) {
-  mkdirSync(__dirname + "/src/environments");
+  mkdirSync(__dirname + "/src/environments", { recursive: true });
 }
 const file = resolve(__dirname, "src", "environments", "version.ts");
 writeFileSync(
