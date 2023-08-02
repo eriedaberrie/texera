@@ -42,7 +42,7 @@ export const defaultEnvironment = {
   /**
    * whether user system is enabled
    */
-  userSystemEnabled: false,
+  userSystemEnabled: true,
 
   /**
    * whether local login is enabled
@@ -62,7 +62,7 @@ export const defaultEnvironment = {
   /**
    * whether user preset feature is enabled, requires user system to be enabled
    */
-  userPresetEnabled: false,
+  userPresetEnabled: true,
 
   /**
    * whether workflow executions tracking feature is enabled
@@ -86,7 +86,7 @@ export const defaultEnvironment = {
    */
   debuggerEnabled: false,
 
-  asyncRenderingEnabled: false,
+  asyncRenderingEnabled: true,
 
   /**
    * the access code for mapbox

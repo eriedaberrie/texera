@@ -10,14 +10,7 @@ for sig in INT TERM ; do
 done
 unset sig
 
-source ~/.bashrc
-
-# scripts/server.sh &
-# scripts/worker.sh &
-
-sleep 100 &
-sleep 100 &
-sleep 100 &
-sleep 100 &
+bash scripts/server.sh &
+bash scripts/worker.sh &
 
 wait
