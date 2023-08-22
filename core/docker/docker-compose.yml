@@ -23,10 +23,11 @@ services:
         hostname: texera-db
         volumes:
             # - ./mysql:/var/lib/mysql
-            - ../scripts/sql/texera_ddl.sql:/docker-entrypoint-initdb.d/texera_ddl.sql
+            - ../scripts/sql/texera_ddl.sql:/docker-entrypoint-initdb.d/00_texera_ddl.sql
+            - ./user_init.sql:/docker-entrypoint-initdb.d/01_user_init.sql
         environment:
             MYSQL_ROOT_PASSWORD: pass
-            MYSQL_USER: texera
-            MYSQL_PASSWORD: texera-pass
+        expose:
+            - "3306"
         ports:
             - "3305:3306"
